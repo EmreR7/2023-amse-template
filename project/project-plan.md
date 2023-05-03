@@ -32,9 +32,20 @@ Commute Traffic Data in Germany: The German Federal Highway Research Institute (
 
 ## Work Packages
 
-<!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
+1.  Automated data pipeline [#1][i1]
+2.  Automated tests [#2][i2]
+3.  Continuous integration [#3][i3]
+4.  Project deployment [#4][i4]
+5.  Choose specific traffic routes to analyze [#5][i5]
+6.  Gather fuel price data from specific year [#6][i6]
+7.  Create timeline graphs of fuel prices and traffic patterns [#7][i7]
+8.  Compare different regions [#8][8]
 
-1. Example Issue [#1][i1]
-2. ...
-
-[i1]: https://github.com/jvalue/2023-amse-template/issues/1
+[i1]: https://github.com/EmreR7/2023-amse-template/issues/1
+[i2]: https://github.com/EmreR7/2023-amse-template/issues/2
+[i3]: https://github.com/EmreR7/2023-amse-template/issues/3
+[i4]: https://github.com/EmreR7/2023-amse-template/issues/4
+[i5]: https://github.com/EmreR7/2023-amse-template/issues/5
+[i6]: https://github.com/EmreR7/2023-amse-template/issues/6
+[i7]: https://github.com/EmreR7/2023-amse-template/issues/7
+[i8]: https://github.com/EmreR7/2023-amse-template/issues/8
