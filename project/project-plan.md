@@ -39,7 +39,7 @@ Commute Traffic Data in Germany: The German Federal Highway Research Institute (
 5.  Choose specific traffic routes to analyze [#5][i5]
 6.  Gather fuel price data from specific year [#6][i6]
 7.  Create timeline graphs of fuel prices and traffic patterns [#7][i7]
-8.  Compare different regions [#8][8]
+8.  Compare different regions [#8][i8]
 
 [i1]: https://github.com/EmreR7/2023-amse-template/issues/1
 [i2]: https://github.com/EmreR7/2023-amse-template/issues/2
