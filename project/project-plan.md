@@ -4,9 +4,7 @@
 
 This project will use 2 data sets to explore the impact of fuel price on commute behavior in order to answer
 how changes in fuel prices affect the use of means for commuting, such as driving. Are there specific 
-fuel price thresholds that lead to changes in commute behavior? Do commute patterns differ between regions
-of Germany with different fuel prices or traffic conditions? In particular, the last 3 years are observed 
-in which the fuel prices have risen sharply.
+fuel price thresholds that lead to changes in commute behavior? In particular, data of one month will be analyzed to try and find some patterns.
 
 ## Rationale
 
