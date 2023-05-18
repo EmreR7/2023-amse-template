@@ -12,14 +12,11 @@ df_traffic_count.to_sql('traffic_count', conn, if_exists='replace', index=False)
 
 conn2 = sqlite3.connect('data/gas_prices.sqlite')
 c2 = conn.cursor()
-c2.execute('''CREATE TABLE gas_prices (date text, station_uuid text, diesel real, e5 real, e10 real, dieselchange int, e5change int, e10change int)''')
+c2.execute('''CREATE TABLE gas_prices (date datetime, station_uuid text, diesel float, e5 float, e10 float, dieselchange int, e5change int, e10change int)''')
 
-path = '/data/06'
-all_files = glob.glob(os.path.join(path, '/*.csv'))
-li = []
-for filename in all_files:
-    df = pd.read_csv(filename, index_col=None, header=0)
-    li.append(df)
-
-df_gas_prices = pd.concat(li, axis=0, ignore_index=True)
-df_gas_prices.to_sql('gas_prices', conn2, if_exists='replace', index=False)
+df_gas_prices = pd.concat(map(pd.read_csv, glob.glob(os.path.join('', "data/06/*.csv"))))
+gas_stations = ['9bd5320e-aea5-497d-a58f-e22b0c9a8990', 'ebfed486-9666-44ec-9dc4-ec474a9d5c1c', '1c797890-605a-47d4-b6e5-5c3f9d6adefe',
+                '75ba1407-d856-447f-bfc7-ec82e9cd9d43', '64c43b30-4e90-4eae-aab5-44358c1ce7e5']
+df_reduced_stations_gas_prices = df_gas_prices[df_gas_prices['station_uuid'].isin(gas_stations)]
+df_reduced_stations_gas_prices.sort_values(by='date', inplace=True)
+df_reduced_stations_gas_prices.to_sql('gas_prices', conn2, if_exists='replace', index=False)
