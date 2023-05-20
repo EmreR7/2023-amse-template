@@ -36,3 +36,4 @@ pipeline AirportsPipeline {
         ->AirportsTableInterpreter
         ->AirportsLoader;
 }
+
