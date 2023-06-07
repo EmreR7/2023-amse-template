@@ -3,9 +3,9 @@ import sqlite3
 
 conn = sqlite3.connect('trainstops.sqlite')
 c = conn.cursor()
-c.execute('''CREATE TABLE trainstops (EVA_NR BIGINT, DS100 TEXT, IFOPT TEXT, Verkehr TEXT, Laenge FLOAT, Breite FLOAT, Betreiber_Name TEXT, Betreiber_Nr INT)''')
+c.execute('''CREATE TABLE trainstops (EVA_NR BIGINT, DS100 TEXT, IFOPT TEXT, NAME TEXT, Verkehr TEXT, Laenge FLOAT, Breite FLOAT, Betreiber_Name TEXT, Betreiber_Nr INT)''')
 
-df = pd.read_csv('https://download-data.deutschebahn.com/static/datasets/haltestellen/D_Bahnhof_2020_alle.CSV', sep=';', decimal=',', usecols=['EVA_NR', 'DS100', 'IFOPT', 'Verkehr', 'Laenge', 'Breite', 'Betreiber_Name', 'Betreiber_Nr'])
+df = pd.read_csv('https://download-data.deutschebahn.com/static/datasets/haltestellen/D_Bahnhof_2020_alle.CSV', sep=';', decimal=',', usecols=['EVA_NR', 'DS100', 'IFOPT', 'NAME', 'Verkehr', 'Laenge', 'Breite', 'Betreiber_Name', 'Betreiber_Nr'])
 valid_verkehr_values = ['FV', 'RV', 'nur DPN']
 df = df.dropna(inplace=False)
 df = df[df['Verkehr'].isin(valid_verkehr_values)]
