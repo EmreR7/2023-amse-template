@@ -1,7 +1,7 @@
 import pandas as pd
 import sqlite3
 
-conn = sqlite3.connect('data/trainstops.sqlite')
+conn = sqlite3.connect('trainstops.sqlite')
 c = conn.cursor()
 c.execute('''CREATE TABLE trainstops (EVA_NR BIGINT, DS100 TEXT, IFOPT TEXT, Verkehr TEXT, Laenge FLOAT, Breite FLOAT, Betreiber_Name TEXT, Betreiber_Nr INT)''')
 
