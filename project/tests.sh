@@ -1,1 +1,1 @@
-python ./test_pipeline.py
+python ./project/test_pipeline.py
