@@ -23,7 +23,7 @@ def assertIsFile(path):
             raise AssertionError("File does not exist: %s" % str(path))
         
 if __name__ == '__main__':
-    etl_pipeline('/Users/emre/2023-amse-template/data/06/2021-06-01-prices.csv','/Users/emre/2023-amse-template/data/gasprices_test.sqlite')
-    etl_pipeline('/Users/emre/2023-amse-template/data/zst9952_2021.csv', '/Users/emre/2023-amse-template/data/trafficcount_test.sqlite')
-    assertIsFile('/Users/emre/2023-amse-template/data/gasprices_test.sqlite')
-    assertIsFile('/Users/emre/2023-amse-template/data/trafficcount_test.sqlite')
+    etl_pipeline('/2023-amse-template/data/06/2021-06-01-prices.csv','/2023-amse-template/data/gasprices_test.sqlite')
+    etl_pipeline('/2023-amse-template/data/zst9952_2021.csv', '/2023-amse-template/data/trafficcount_test.sqlite')
+    assertIsFile('/2023-amse-template/data/gasprices_test.sqlite')
+    assertIsFile('/2023-amse-template/data/trafficcount_test.sqlite')
