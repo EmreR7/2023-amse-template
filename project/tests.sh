@@ -1,1 +1,1 @@
-python /Users/emre/2023-amse-template/test_pipeline.py
+python ./test_pipeline.py
