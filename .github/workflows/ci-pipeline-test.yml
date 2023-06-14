@@ -15,4 +15,4 @@ jobs:
             python-version: 3.11
 
         - name: Pipeline Test
-          run: project/tests.sh
+          run: ./project/tests.sh
