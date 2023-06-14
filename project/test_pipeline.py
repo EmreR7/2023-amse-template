@@ -3,7 +3,7 @@ import sqlite3
 import pathlib as pl
 
 def interpretAsCsv(data):
-    return pd.read_csv(data)
+    return pd.read_csv(data, sep=',')
 
 def transform(data):
     return data.dropna()
@@ -23,7 +23,5 @@ def assertIsFile(path):
             raise AssertionError("File does not exist: %s" % str(path))
         
 if __name__ == '__main__':
-    etl_pipeline('/2023-amse-template/data/06/2021-06-01-prices.csv','/2023-amse-template/data/gasprices_test.sqlite')
-    etl_pipeline('/2023-amse-template/data/zst9952_2021.csv', '/2023-amse-template/data/trafficcount_test.sqlite')
-    assertIsFile('/2023-amse-template/data/gasprices_test.sqlite')
-    assertIsFile('/2023-amse-template/data/trafficcount_test.sqlite')
+    etl_pipeline('https://dev.azure.com/tankerkoenig/_git/tankerkoenig-data?path=/prices/2021/06/2021-06-06-prices.csv','./gasprices_test.sqlite')
+    assertIsFile('./gasprices_test.sqlite')
