@@ -4,9 +4,6 @@ on:
     push:
         branches:
         - main
-        paths:
-        - data/**
-        - project/**
 
 jobs:
     test-pipeline:
