@@ -3,7 +3,7 @@ import sqlite3
 import pathlib as pl
 
 def interpretAsCsv(data):
-    return pd.read_csv(data, sep=',', nrows=100)
+    return pd.read_csv(data, sep=',', nrows=100, on_bad_lines='skip')
 
 def transform(data):
     return data.dropna()
