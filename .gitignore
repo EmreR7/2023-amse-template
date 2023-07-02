@@ -5,3 +5,4 @@ data/06
 *.sqlite
 *.csv
 exercise/cars.jv
+*.zip
