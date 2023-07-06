@@ -1,6 +1,6 @@
 valuetype GeoBounds oftype decimal {
     constraints: [
-        BoundRange,
+        BoundRange
     ];
 }
 
@@ -13,7 +13,7 @@ constraint BoundRange oftype RangeConstraint {
 
 valuetype ZoneBound oftype integer {
     constraints: [
-        ZoneRange,
+        ZoneRange
     ];
 }
 
@@ -38,7 +38,7 @@ pipeline Stops {
     }
 
     block StopsTextFileInterpreter oftype TextFileInterpreter {
-        encoding: "ASCII";
+        
     }
 
     block StopsCSVInterpreter oftype CSVInterpreter {
