@@ -59,7 +59,7 @@ pipeline Stops {
     
     block StopsLoader oftype SQLiteLoader {
         table: "stops";
-        file: "./gtfs.sqlite";
+        file: "/gtfs.sqlite";
     }
 
     StopsExtractor
